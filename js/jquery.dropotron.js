@@ -540,6 +540,7 @@ function commafy(num) {
 	 return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 }
 
+
 function totalCurrentPayments() {
 	balancecur = parseFloat(document.getElementById('balancecur').value);
 	prinpaid = parseFloat(document.getElementById('prinpaid').value);
@@ -551,7 +552,7 @@ function totalCurrentPayments() {
 	months = -(Math.log(1-((monthlyintcur*balancecur)/monthlypaymentcur)))/Math.log(1+monthlyintcur);
 	totalpaymentscur = months * monthlypaymentcur;
 	totalintpaymentscur = totalpaymentscur - balancecur;
-	document.getElementById("payments").innerHTML = "The total principal and interest payments with current loan is $" + commafy(totalpaymentscur.toFixed());
+	document.getElementById("payments").innerHTML = "The total principal and interest payments with current loan is $" + commafy(totalpaymentscur.toFixed()) + ".";
 	}
 
 function totalNewPayments() {
@@ -563,8 +564,9 @@ function totalNewPayments() {
 	monthlyintnew = aprnew/1200;
 	monthlypaymentnew = (monthlyintnew*balancenew)/(1-(Math.pow((1+monthlyintnew),-numperiods)));
 	totalpaymentsnew = monthlypaymentnew * numperiods;
+	totalpaymentsplusclose = totalpaymentsnew + closingcost;
 	totalintpaymentsnew = totalpaymentsnew - balancenew;
-	document.getElementById('paymentsnew').innerHTML = "The total principal and interest payments if you refinance is $" + commafy(totalpaymentsnew.toFixed());
+	document.getElementById('paymentsnew').innerHTML = "The total principal and interest payments if you refinance is $" + commafy(totalpaymentsnew.toFixed()) + ".";
 	}
 
 function totalSavings() {
@@ -581,7 +583,5 @@ function tableDisplay() {
 	document.getElementById('principalnew').innerHTML = "$" + commafy(balancenew.toFixed(2));
 	document.getElementById('interestnew').innerHTML = "$" + commafy(totalintpaymentsnew.toFixed(2));
 	document.getElementById('closecost').innerHTML = "$" + commafy(closingcost.toFixed(2));
-	document.getElementById('totalnew').innerHTML = "$" + commafy(totalpaymentsnew.toFixed(2));
-	document.getElementById('escrowcur').innerHTML = "$" + commafy(escrow.toFixed(2));
-	document.getElementById('escrownew').innerHTML = "$" + commafy(escrow.toFixed(2));
+	document.getElementById('totalnew').innerHTML = "$" + commafy(totalpaymentsplusclose.toFixed(2));
 	}
