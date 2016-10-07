@@ -534,7 +534,7 @@
 
 /* Functions below are included to capture, calculate, and return mortgage information -JB*/
 
-alert("Hey");
+//alert("Hey");
 
 function commafy(num) {
 	 return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")

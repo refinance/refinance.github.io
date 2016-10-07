@@ -276,9 +276,6 @@ ol li {
 	padding-left: 27px;
 }
 
-#divider {
-	border-left: red;
-}
 .submissionfield {
 	width: 225px; 
 	height: 30px;
@@ -308,6 +305,7 @@ font-size: 10px;
 
 #divider{
 	border-right: 1px solid #bebebe;
+	margin-left: 27px;
 }
 
 #totalcur, #totalnew, #totnew, #totcur {
