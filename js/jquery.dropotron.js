@@ -553,7 +553,8 @@ function totalCurrentPayments() {
 	totalpaymentscur = months * monthlypaymentcur;
 	totalintpaymentscur = totalpaymentscur - balancecur;
 	document.getElementById("payments").innerHTML = "The total principal and interest payments with current loan is $" + commafy(totalpaymentscur.toFixed()) + ".";
-	document.getElementById("balancecurrent").innerHTML = commafy(balancecur.toFixed()) + ".";
+	document.getElementById("balancecurrent").innerHTML = commafy(balancecur.toFixed());
+	document.getElementById("interestcurrent").innerHTML = commafy(totalintpaymentscur.toFixed());
 	}
 
 function totalNewPayments() {
