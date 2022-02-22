@@ -559,6 +559,7 @@ function totalCurrentPayments() {
 	document.getElementById("totalcurrent").innerHTML = "$" + commafy(totalpaymentscur.toFixed());
 	document.getElementById("monthlypaymentcurrent").innerHTML = "$" + commafy(monthlypaymentcur.toFixed());
 	document.getElementById("monthlyescrow").innerHTML = "$" + commafy(escrow.toFixed());
+	document.getElementById("monthlyescrow2").innerHTML = "$" + commafy(escrow.toFixed());
 	document.getElementById("totalmonthlypaymentcurrent").innerHTML = "$" + commafy(totalmonthlypaymentcur.toFixed());
 	}
 
