@@ -583,6 +583,7 @@ function totalNewPayments() {
 	document.getElementById("closecost").innerHTML = "$" + commafy(closingcost.toFixed());
 	document.getElementById("totalnew").innerHTML = "$" + commafy(totalpaymentsnew.toFixed());
 	document.getElementById("monthlypaymentnew2").innerHTML = "$" + commafy(monthlypaymentnew.toFixed());
+	document.getElementById("monthlyescrow").innerHTML = "$" + commafy(escrow.toFixed());
 	document.getElementById("totalmonthlypaymentnew2").innerHTML = "$" + commafy(totalmonthlypaymentnew.toFixed());
 	}
 
