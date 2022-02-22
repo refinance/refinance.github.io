@@ -570,10 +570,10 @@ function totalNewPayments() {
 	escrow = parseFloat(document.getElementById('escrow').value);
 	numperiods = termnew * 12;
 	monthlyintnew = aprnew/1200;
-	monthlypaymentnew = (monthlyintnew*balancenew)/(1-(Math.pow((1+monthlyintnew),-numperiods)));
+	monthlypaymentnew = (monthlyintnew*(balancenew+closingcost)d)/(1-(Math.pow((1+monthlyintnew),-numperiods)));
 	totalpaymentsnew = monthlypaymentnew * numperiods;
 	totalpaymentsplusclose = totalpaymentsnew + closingcost;
-	totalintpaymentsnew = totalpaymentsnew - balancenew;
+	totalintpaymentsnew = totalpaymentsnew - balancenew - closingcost;
 	intsavings = totalpaymentscur - totalpaymentsnew;
 	totalmonthlypaymentnew = monthlypaymentnew + escrow;
 	document.getElementById('paymentsnew').innerHTML = "Total principal and interest payments if you refinance is $" + commafy(totalpaymentsnew.toFixed()) + ".";
