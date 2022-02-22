@@ -552,10 +552,14 @@ function totalCurrentPayments() {
 	months = -(Math.log(1-((monthlyintcur*balancecur)/monthlypaymentcur )))/Math.log(1+monthlyintcur);
 	totalpaymentscur = months * monthlypaymentcur;
 	totalintpaymentscur = totalpaymentscur - balancecur;
+	totalmonthlypaymentcur = monthlypaymentcur + escrow;
 	document.getElementById("payments").innerHTML = "Total principal and interest payments with current loan is $" + commafy(totalpaymentscur.toFixed()) + ".";
 	document.getElementById("balancecurrent").innerHTML = "$" + commafy(balancecur.toFixed());
 	document.getElementById("interestcurrent").innerHTML = "$" + commafy(totalintpaymentscur.toFixed());
 	document.getElementById("totalcurrent").innerHTML = "$" + commafy(totalpaymentscur.toFixed());
+	document.getElementById("monthlypaymentcurrent").innerHTML = "$" + commafy(monthlypaymentcur.toFixed());
+	document.getElementById("monthlyescrow").innerHTML = "$" + commafy(escrow.toFixed());
+	document.getElementById("totalmonthlypaymentcurrent").innerHTML = "$" + commafy(totalmonthlypaymentcur.toFixed());
 	}
 
 function totalNewPayments() {
