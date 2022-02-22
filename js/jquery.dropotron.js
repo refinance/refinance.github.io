@@ -571,7 +571,7 @@ function totalNewPayments() {
 	totalintpaymentsnew = totalpaymentsnew - balancenew;
 	intsavings = totalpaymentscur - totalpaymentsnew;
 	document.getElementById('paymentsnew').innerHTML = "The total principal and interest payments if you refinance is $" + commafy(totalpaymentsnew.toFixed()) + ".";
-	document.getElementById("interestsavings").innerHTML = = "The interest savings if you refinance is $" + commafy(intsavings.toFixed()) + ".";
+	document.getElementById("interestsavings").innerHTML = "The interest savings if you refinance is $" + commafy(intsavings.toFixed()) + ".";
 	document.getElementById("balancenew2").innerHTML = "$" + commafy(balancenew.toFixed());
 	document.getElementById("interestnew").innerHTML = "$" + commafy(totalintpaymentsnew.toFixed());
 	document.getElementById("closecost").innerHTML = "$" + commafy(closingcost.toFixed());
