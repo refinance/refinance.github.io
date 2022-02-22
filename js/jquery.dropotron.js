@@ -570,7 +570,7 @@ function totalNewPayments() {
 	escrow = parseFloat(document.getElementById('escrow').value);
 	numperiods = termnew * 12;
 	monthlyintnew = aprnew/1200;
-	monthlypaymentnew = (monthlyintnew*(balancenew+closingcost)d)/(1-(Math.pow((1+monthlyintnew),-numperiods)));
+	monthlypaymentnew = (monthlyintnew*(balancenew+closingcost))/(1-(Math.pow((1+monthlyintnew),-numperiods)));
 	totalpaymentsnew = monthlypaymentnew * numperiods;
 	totalpaymentsplusclose = totalpaymentsnew + closingcost;
 	totalintpaymentsnew = totalpaymentsnew - balancenew - closingcost;
