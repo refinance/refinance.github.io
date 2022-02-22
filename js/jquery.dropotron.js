@@ -549,12 +549,13 @@ function totalCurrentPayments() {
 	aprcur = parseFloat(document.getElementById('aprcur').value);
 	monthlypaymentcur = prinpaid + intpaid;
 	monthlyintcur = aprcur/1200;
-	months = -(Math.log(1-((monthlyintcur*balancecur)/monthlypaymentcur)))/Math.log(1+monthlyintcur);
+	months = -(Math.log(1-((monthlyintcur*balancecur)/monthlypaymentcur )))/Math.log(1+monthlyintcur);
 	totalpaymentscur = months * monthlypaymentcur;
 	totalintpaymentscur = totalpaymentscur - balancecur;
 	document.getElementById("payments").innerHTML = "The total principal and interest payments with current loan is $" + commafy(totalpaymentscur.toFixed()) + ".";
-	document.getElementById("balancecurrent").innerHTML = commafy(balancecur.toFixed());
-	document.getElementById("interestcurrent").innerHTML = commafy(totalintpaymentscur.toFixed());
+	document.getElementById("balancecurrent").innerHTML = "$" + commafy(balancecur.toFixed());
+	document.getElementById("interestcurrent").innerHTML = "$" + commafy(totalintpaymentscur.toFixed());
+	document.getElementById("totalcurrent").innerHTML = "$" + commafy(totalpaymentscur.toFixed());
 	}
 
 function totalNewPayments() {
@@ -569,6 +570,10 @@ function totalNewPayments() {
 	totalpaymentsplusclose = totalpaymentsnew + closingcost;
 	totalintpaymentsnew = totalpaymentsnew - balancenew;
 	document.getElementById('paymentsnew').innerHTML = "The total principal and interest payments if you refinance is $" + commafy(totalpaymentsnew.toFixed()) + ".";
+	document.getElementById("balancenew").innerHTML = "$" + commafy(balancenew.toFixed());
+	document.getElementById("interestnew").innerHTML = "$" + commafy(totalintpaymentsnew.toFixed());
+	document.getElementById("closecost").innerHTML = "$" + commafy(closingcost.toFixed());
+	document.getElementById("totalnew").innerHTML = "$" + commafy(totalpaymentsnew.toFixed());
 	}
 
 function totalSavings() {
