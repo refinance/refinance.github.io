@@ -242,7 +242,7 @@ ol li {
 #savingsbar {
 	padding: 30px;
 	height: auto;
-	vertical-align: center;
+	vertical-align: left;
 	background-color: #fafafa;
 }
 
