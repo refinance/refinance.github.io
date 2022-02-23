@@ -248,7 +248,7 @@ ol li {
 
 #payments, #paymentsnew, #savings, #interestsavings {
 	font-size: 32px;
-	text-align: center;
+	text-align: left;
 }
 #tablecompare {
 	height: auto;
